@@ -1,29 +1,14 @@
-# README #
+# QA Exercise
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This is a small exercise for QA software engineers. It provides with an HTML page with embeded JS scripts and an extra CSS file.
 
-### What is this repository for? ###
+### The challenge
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+- Set up this project with your preffered tools
+- Read the code and identify the use cases. Create automation tests for all of them.
+- Update the Run Project Guidlines section of the README file, with instructions for running the project and tests
+- Use utility classes and/or page object model classes based on the OOP paradigm to structure the solution into reusable blocks of code
 
-### How do I get set up? ###
+### Run Project Guidlines
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Please provide instructions here.
