@@ -14,8 +14,8 @@ public class BaseT {
 
     public Logger logger = LogManager.getLogger(BaseT.class.getName());
 
-    private static ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
-    private static ThreadLocal<WebDriverWait> threadLocalDriverWait = new ThreadLocal<>();
+    private static final ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
+    private static final ThreadLocal<WebDriverWait> threadLocalDriverWait = new ThreadLocal<>();
     public EnvDataConfig envDataConfig = new EnvDataConfig();
 
 
@@ -48,7 +48,7 @@ public class BaseT {
 
     public void closeBrowser() {
         getDriver().quit();
-        killDriver();
+//        killDriver();
     }
 
     private void killDriver() {
@@ -56,10 +56,8 @@ public class BaseT {
         String os = System.getProperty("os.name");
         if (os.toLowerCase().contains("windows")) {
             try {
-                switch (browser) {
-                    case "chrome":
-                        Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
-                        break;
+                if (browser.equals("chrome")) {
+                    Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
                 }
             } catch (IOException e) {
                 e.printStackTrace();
