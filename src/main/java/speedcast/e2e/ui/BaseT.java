@@ -1,18 +1,13 @@
 package speedcast.e2e.ui;
 
-import io.cucumber.java.Scenario;
 import speedcast.e2e.ui.utils.browsers.*;
 import speedcast.e2e.ui.utils.config.EnvDataConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.time.Duration;
 
 public class BaseT {
@@ -40,7 +35,6 @@ public class BaseT {
         return threadLocalDriver.get();
     }
 
-
     public void openBrowser() {
         String browser = envDataConfig.getBrowser();
         if ("chrome".equals(browser)) {
@@ -53,8 +47,8 @@ public class BaseT {
     }
 
     public void closeBrowser() {
-//        getDriver().quit();
-//        killDriver();
+        getDriver().quit();
+        killDriver();
     }
 
     private void killDriver() {
