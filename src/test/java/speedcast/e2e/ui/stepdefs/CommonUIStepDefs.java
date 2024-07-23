@@ -1,4 +1,4 @@
-package speedcast.e2e.stepdefs;
+package speedcast.e2e.ui.stepdefs;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;

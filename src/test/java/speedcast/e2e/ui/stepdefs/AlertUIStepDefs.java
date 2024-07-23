@@ -1,4 +1,4 @@
-package speedcast.e2e.stepdefs;
+package speedcast.e2e.ui.stepdefs;
 
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
